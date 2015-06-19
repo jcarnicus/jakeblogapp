@@ -12,6 +12,11 @@ class Post < ActiveRecord::Base
         puts " #{snippet} "
     end
 
+    def preview_words
+        snippet2 = body.split[0..4].join(" ")
+        puts " #{snippet2}"
+    end
+
     #twitter check operates on the instance's title
     #this looks pretty good, clean up code and space out formatting
     def twitter_check
