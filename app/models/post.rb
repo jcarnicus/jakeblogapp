@@ -7,15 +7,15 @@ class Post < ActiveRecord::Base
     end
 
     #twitter check operates on the instance's title
+    #this looks pretty good, clean up code and space out formatting
     def twitter_check
-        puts title.length
         if  title.length < 140
-            diff = (140-(title.length))
+            diff = (140 - title.length)
             puts "Your msg is ready for Twitter, you have #{diff} chars to go"
         else
-             diff = (title.length)-140
+             diff = title.length - 140
              puts "your msg is #{diff} characters too long to tweet"
-        end
+        end 
     end
     
     
