@@ -5,6 +5,12 @@ class Post < ActiveRecord::Base
         puts "Post title is #{title}"
         puts "This is a great blog post, you should read it"
     end
+    
+    #this should show the first 10 characters of the body
+    def preview_body
+        snippet = body[0..10]
+        puts " #{snippet} "
+    end
 
     #twitter check operates on the instance's title
     #this looks pretty good, clean up code and space out formatting
@@ -14,6 +20,7 @@ class Post < ActiveRecord::Base
             puts "Your msg is ready for Twitter, you have #{diff} chars to go"
         else
              diff = title.length - 140
+             
              puts "your msg is #{diff} characters too long to tweet"
         end 
     end
