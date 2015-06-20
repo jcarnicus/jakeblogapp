@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
     root to: 'welcome#home'
     
-  resources :posts, only: [:index, :show]
+  resources :posts, only: [:index, :show, :new, :create]
 end
 
 
