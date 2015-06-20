@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
     def index
-        render "index.html"
+        @posts = Post.all
+        render "index.html.erb"
     end
 
     def show
