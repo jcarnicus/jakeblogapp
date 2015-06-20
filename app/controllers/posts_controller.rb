@@ -16,7 +16,12 @@ class PostsController < ApplicationController
     
     def create
         @post = Post.create(post_params)
+    
+        if @post.valid?
             redirect_to post_path(@post)
+        else 
+            redirect_to new_post_path
+        end
     end
   
     def post_params
