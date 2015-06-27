@@ -1,7 +1,12 @@
-<h1> Here is the list of posts!</h1>
+<h1> This is our index of blog posts!</h1>
 
 <% @posts.each do |p| %>
    <div> 
    <a href="/posts/<%= p.id %>"> <%= p.title %> </a>
    </div>
+  
+   
 <% end %>
+ </br>
+   <a href="/posts/new">Create new post</a>
+   
