@@ -35,4 +35,16 @@ class Post < ActiveRecord::Base
         puts "BOOM CLASS METHOD!"
         puts "I have #{Post.count} posts available"
     end
+    
+    def upcase_body
+        return body.upcase 
+    end
+    
+    def smush_body
+        return body.gsub(" ","")
+    end
+    
+    def yell_body
+        return body.upcase.gsub(" ","")
+    end
 end
